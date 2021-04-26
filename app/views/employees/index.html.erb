@@ -1,0 +1,24 @@
+<h1> Listado de productos </h1>
+<%= link_to "Agregar empleado", employees_new_path %>
+<table>
+    <tr>
+        <thead>
+            <th>Id EMPLEADO</th>
+            <th>NOMBRE</th>
+            <th>CARGO</th>
+            <th>ID JEFE</th>
+        </thead>
+    </tr>
+    <% @employees.each do |employee|%>
+        <tr>
+            <td> <%= employee.idEmployee %> </td>
+            <td> <%= employee.fullname %> </td>
+            <td> <%= employee.occupation %> </td>
+            <td> <%= employee.idBoss %> </td>
+            <td>
+                <%= link_to "Editar", edit_employee_path(employee) %>
+                <%= link_to "Eliminar", employee, method: :delete, data: { confirm: "¿Desea eliminar el empleado?" } %>
+            </td>
+        </tr>
+    <% end %>
+</table>

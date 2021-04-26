@@ -1,0 +1,21 @@
+<%= form_for @employee do |f| %>
+    <div>
+        <%= f.label :idEmployee %>
+        <%= f.text_field :idEmployee %>
+    </div>
+    <div>
+        <%= f.label :fullname %>
+        <%= f.text_field :fullname %>
+    </div>
+    <div>
+        <%= f.label :occupation %>
+        <%= f.text_field :occupation %>
+    </div>
+    <div>
+        <%= f.label :idBoss %>
+        <%= f.text_field :idBoss %>
+    </div>
+    <div>
+        <%= f.submit %>
+    </div>
+<% end %>
